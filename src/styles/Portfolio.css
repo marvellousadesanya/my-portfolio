@@ -1,0 +1,121 @@
+.portfolio-header-section {
+  width: 80%;
+  display: flex;
+  justify-content: left;
+  gap: 5rem;
+  padding-left: 10%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-heading {
+  font-size: 1rem;
+}
+
+.portfolio-header-section a {
+  text-decoration: none;
+  color: white;
+}
+
+#github-btn {
+  background-color: black;
+  color: white;
+  border: 2px solid;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.portfolios {
+  width: 80%;
+  color: black;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+.portfolio {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px 0 20px 0;
+  align-items: stretch;
+}
+
+.text-section {
+  padding: 15px 60px 15px 60px;
+  flex: 50%;
+}
+
+/* .portfolio:first-child {
+  width: 100%;
+} */
+
+.portfolio-image-container {
+  background-image: url("../images/social-links.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+  border-bottom-right-radius: inherit;
+  border-top-right-radius: inherit;
+  background-position: center;
+  /* width: 100%; */
+  flex: 30%;
+}
+
+#portfolio-image-container2 {
+  background-image: url("../images/to-do-list.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+  border-bottom-right-radius: inherit;
+  border-top-right-radius: inherit;
+  background-position: center;
+  /* width: 100%; */
+  flex: 30%;
+}
+
+.portfolio-image {
+  margin-bottom: 0px;
+  padding: -50px !important;
+}
+
+.stack {
+  display: flex;
+  color: black;
+}
+
+.fa-brands {
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.view-btn a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #f1f1f1;
+  background-color: rgb(28, 28, 28);
+  color: white;
+  height: 35px;
+  /* margin-top: 155px; */
+  text-align: center;
+  z-index: 5;
+}
+
+@media only screen and (max-width: 600px) {
+  .portfolios {
+    width: 95%;
+  }
+
+  .text-section {
+    padding: 5px 20px 5px 20px;
+    flex: 30%;
+  }
+}

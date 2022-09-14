@@ -1,0 +1,99 @@
+.contact-heading {
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  gap: 0rem;
+  justify-content: space-evenly;
+  /* align-items: center; */
+}
+
+.form-container {
+  width: 70%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 90%;
+  max-width: 600px;
+}
+
+.half-input-container {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin: 0px;
+  justify-content: space-evenly;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  outline: 0;
+  border: none;
+  color: #fff;
+  background: #333;
+  font-size: 15px;
+  border-radius: 10px;
+  margin: 5px 0 5px 0;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #fff;
+  opacity: 1;
+  font-size: 15px;
+  /* font-weight: bold; */
+  font-family: "Poppins";
+}
+
+#submit {
+  padding: 10px;
+  /* width: 103.5%; */
+  border: solid 2px #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  background: transparent;
+  font-weight: bold;
+  color: white;
+}
+
+.fa-brands a {
+  text-decoration: none;
+}
+
+.fa-brands:hover {
+  transform: translateY(3px);
+}
+
+.fa-facebook:hover {
+  color: #4267b2;
+}
+
+.fa-instagram:hover {
+  color: #c13584;
+}
+
+.fa-square-twitter:hover {
+  color: #00acee;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-container {
+    display: block;
+  }
+  .form-container {
+    width: 90%;
+  }
+  .socials-container {
+    padding-left: 1rem;
+  }
+}

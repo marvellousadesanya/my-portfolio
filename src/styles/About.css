@@ -1,0 +1,130 @@
+.about-me-header {
+  text-align: center;
+}
+
+.general-info {
+  display: flex;
+  align-content: space-around;
+  margin-right: 10%;
+  margin-left: 10%;
+  gap: 2rem;
+}
+
+.image-container {
+  width: 60%;
+}
+
+.about-page-img {
+  width: 100%;
+}
+
+.about-me-text {
+  /* margin-left: 30%; */
+  margin-right: 40%;
+}
+
+.skill-section {
+  padding-top: 20px;
+  margin-left: 32%;
+}
+
+.skills {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.skill-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  margin: 20px 0;
+}
+
+.skill-bar {
+  height: 14px;
+  background-color: rgb(68, 67, 67);
+  border-radius: 3px;
+}
+
+.skill-per {
+  height: 14px;
+  background-color: #d13639;
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 2.5s 1;
+}
+
+.skill-per::before {
+  content: attr(per);
+  position: absolute;
+  color: black;
+  padding: 4px 6px;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  z-index: 2;
+  transform: translate(50%);
+}
+
+.skill-per::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+.cv-btn {
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  margin-left: 20%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@keyframes fillBars {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .general-info {
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+    /* padding-left: 20%; */
+  }
+  .image-container {
+    width: 80%;
+  }
+  .about-me-text {
+    /* margin-left: 30%; */
+    margin-right: 15%;
+  }
+
+  .skill-section {
+    padding-top: 20px;
+    margin-left: 0%;
+    /* padding-left: 2px; */
+    overflow: hidden;
+  }
+
+  .skill-bar {
+    width: 90%;
+  }
+}
