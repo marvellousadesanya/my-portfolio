@@ -12,6 +12,10 @@
   font-size: 1rem;
 }
 
+.projects-done {
+  text-align: center;
+}
+
 .portfolio-header-section a {
   text-decoration: none;
   color: white;
@@ -109,6 +113,61 @@ footer {
   z-index: 5;
 }
 
+.containing-project-div {
+  padding-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.new-portfolio-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0;
+}
+
+.project-image {
+  width: 400px;
+  height: 300px;
+  border-radius: 7px;
+}
+
+.project-image:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.project-btn {
+  padding: 10px;
+  width: 100%;
+  background-color: #005b7f;
+  color: white;
+  border-color: transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/*.layer {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), blue) !important;
+  border-radius: 7px;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  left: 0;
+}*/
+
+.github-view {
+  margin-top: 10%;
+  padding: 15px;
+  color: white;
+  background-color: #005b7f;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 600px) {
   .portfolios {
     width: 95%;
@@ -117,5 +176,9 @@ footer {
   .text-section {
     padding: 5px 20px 5px 20px;
     flex: 30%;
+  }
+
+  .new-portfolio-container {
+    grid-template-columns: auto;
   }
 }

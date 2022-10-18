@@ -18,19 +18,41 @@
   width: 100%;
 }
 
+.about-me-text-container {
+  height: 50vh;
+  animation: fadeIn 2s ease;
+}
+
 .about-me-text {
-  /* margin-left: 30%; */
-  margin-right: 40%;
+  padding-top: 25px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.about-me-text {
+  text-align: center;
+  transition: 1s;
+}
+
+.core-principles {
+  text-align: center;
 }
 
 .skill-section {
   padding-top: 20px;
-  margin-left: 32%;
+  margin-left: 5%;
 }
 
 .skills {
   width: 100%;
-  max-width: 600px;
+  max-width: 80%;
   padding: 0 20px;
 }
 
@@ -49,7 +71,7 @@
 
 .skill-per {
   height: 14px;
-  background-color: #d13639;
+  background-color: #005b7f;
   border-radius: 3px;
   position: relative;
   animation: fillBars 2.5s 1;
@@ -101,6 +123,48 @@
     width: 100%;
   }
 }
+
+.carousel {
+  height: 40%;
+}
+.items {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+  overflow-x: visible;
+}
+
+.item {
+  background-color: rgba(225, 225, 225, 0.1);
+  padding: 2rem;
+  min-width: 30rem;
+  height: 200px;
+  border-radius: 5px;
+  border: 1.5px solid rgba(225, 225, 225, 0.1);
+  position: relative;
+  color: white;
+}
+
+.item:hover {
+  background-color: rgb(95, 92, 92);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* .item::before {
+  background: radial-gradient(
+    400px circle at 100px 100px,
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+} */
 
 @media only screen and (max-width: 600px) {
   .general-info {

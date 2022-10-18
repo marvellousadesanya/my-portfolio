@@ -1,23 +1,41 @@
-import React from "react";
-
+import React, { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion/dist/framer-motion";
 import "../styles/About.css";
 
 function About() {
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch("my-cv.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "my-cv.pdf";
+        alink.click();
+      });
+    });
+  };
+
+  // For carousel
+  const [width, setWidth] = useState(0);
+  const carousel = useRef();
+
+  useEffect(() => {
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  }, []);
+
+  // Function will execute on click of button
+
   return (
     <>
-      <h3 className="about-me-header">Glad to have you here!</h3>
+      <h3 className="about-me-header">About</h3>
       <div className="general-info">
-        <div className="image-container">
-          <img
-            src={require("../images/marv.jpg")}
-            alt="my pic"
-            className="about-page-img"
-          ></img>
-        </div>
         <div className="about-me-text-container">
           <p className="about-me-text">
             I am currently transitioning to tech after about 5 years in Digital
-            Marketing. I am currently seeking to provide immense value to your
+            Marketing. I am also seeking to provide immense value to your
             organization and garner enough knowledge to become a great software
             engineer.
           </p>
@@ -31,6 +49,48 @@ function About() {
             journey albeit it's challenges.
           </p>
         </div>
+      </div>
+
+      <div>
+        <h2 className="core-principles">Core Principles</h2>
+        <motion.div
+          ref={carousel}
+          className="carousel"
+          whileTap={{ cursor: "grabbing" }}
+        >
+          <motion.div
+            drag="x"
+            dragConstraints={{ right: 0, left: -width }}
+            className="items"
+          >
+            <motion.div className="item">
+              <h3>Integrity</h3>
+              <p>My record speaks for me, I am someone you can always trust.</p>
+              <img></img>
+            </motion.div>
+            <motion.div className="item">
+              <h3>Competence</h3>
+              <p>
+                As someone striving to be exceptional in this field. I am
+                dedicated to delivering only the best without settling.
+              </p>
+              <img></img>
+            </motion.div>
+            <motion.div className="item">
+              <h3>Discipline</h3>
+              <p>
+                This is a core principle that I have developed all through the
+                years. A successful developer cannot do without discipline
+              </p>
+              <img></img>
+            </motion.div>
+            <motion.div className="item">
+              <h3>Dedication</h3>
+              <p>I am ever dedicated to my work.</p>
+              <img></img>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
 
       <div className="skill-section">
@@ -69,7 +129,9 @@ function About() {
             </div>
           </div>
         </div>
-        <button className="cv-btn">Download CV</button>
+        <button onClick={onButtonClick} className="cv-btn">
+          Download CV
+        </button>
       </div>
     </>
   );
