@@ -103,7 +103,7 @@ function Portfolio() {
           <Project
             title="Social links app"
             description="It holds all company's social media links."
-            image="social-links.jpg"
+            image="sociallinks.jpg"
             src="links.ramosoflagosrealty.com"
           />
         </div>
@@ -125,6 +125,8 @@ function Portfolio() {
             image="social-links.jpg"
           />
         </div> */}
+      </div>
+      <div className="portfolio-btn-div">
         <a href="https://github.com/marvellousadesanya">
           <button className="github-view">View Github</button>
         </a>

@@ -15,7 +15,7 @@ function Project({ title, description, image, src }) {
             <h3 className="project-title">{title}</h3>
             <p className="project-description">{description}</p>
             <a href={src}>
-              <button className="project-btn">View</button>
+              <i className="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </div>

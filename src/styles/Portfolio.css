@@ -122,50 +122,103 @@ footer {
 
 .new-portfolio-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 0;
 }
 
-.project-image {
-  width: 400px;
-  height: 300px;
+.new-portfolio-container div {
+  padding: 10px;
   border-radius: 7px;
 }
 
-.project-image:hover {
-  transform: scale(1.05);
-  transition: 0.5s;
+.project-div img {
+  width: 400px;
+  height: 300px;
+  border-radius: inherit;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.project-div {
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-div:hover img {
+  /* transform: scale(1.1); */
+  overflow: hidden;
 }
 
 .project-btn {
   padding: 10px;
-  width: 100%;
-  background-color: #005b7f;
+  /* width: 100%; */
+  background-color: transparent;
   color: white;
   border-color: transparent;
   border-radius: 7px;
   cursor: pointer;
   font-weight: 700;
+  border: 2px solid white;
 }
 
-/*.layer {
-  width: inherit;
-  height: inherit;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), blue) !important;
+.layer {
+  padding: 0;
+
+  text-align: center;
+  width: 0;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #005b7f) !important;
   border-radius: 7px;
   position: absolute;
   bottom: 0;
+  /* left: 0; */
   overflow: hidden;
-  left: 0;
-}*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: height 0.5s;
+}
+
+.project-div:hover .layer {
+  height: 91%;
+  width: 91%;
+  overflow: hidden;
+  /* transform: scale(1.1); */
+}
 
 .github-view {
   margin-top: 10%;
   padding: 15px;
   color: white;
   background-color: #005b7f;
+  border-color: #005b7f;
   border-radius: 7px;
   font-weight: bold;
+}
+
+.fa-arrow-up-right-from-square {
+  color: #005b7f;
+  background-color: white;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.portfolio-btn-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: button-ani 1s linear;
+  margin-bottom: 5%;
+}
+
+@keyframes button-ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 600px) {

@@ -15,7 +15,9 @@ function Nav() {
     <>
       <nav>
         <div id="home-btn">
-          <a href="/">Home</a>
+          <Link to="/">
+            <a href="/">Home</a>
+          </Link>
         </div>
         <img
           src={require("../images/icon-menu.png")}
@@ -26,14 +28,20 @@ function Nav() {
         <div className={isMobile ? "expanded" : "nav-links"}>
           <ul className="navi">
             <Link to="/about">
-              <li id="item1">About Me</li>
+              <li id="item1" onClick={() => setIsMobile(!isMobile)}>
+                About Me
+              </li>
             </Link>
             <Link to="/portfolio">
-              <li>Portfolio</li>
+              <li onClick={() => setIsMobile(!isMobile)}>Portfolio</li>
             </Link>
             <Link to="/contact">
-              <li>Contact Me</li>
+              <li onClick={() => setIsMobile(!isMobile)}>Contact Me</li>
             </Link>
+            <i
+              className="fa-solid fa-xmark"
+              onClick={() => setIsMobile(!isMobile)}
+            ></i>
           </ul>
         </div>
       </nav>

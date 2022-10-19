@@ -1,8 +1,6 @@
 nav {
   display: flex;
   justify-content: space-between;
-  /* padding-left: 2rem;
-  padding-right: 2rem; */
   background-color: #0a0a0a;
   color: white;
   /* position: fixed; */
@@ -53,19 +51,6 @@ nav {
   /* letter-spacing: 5px; */
 }
 
-/* #item1::after {
-  content: "";
-  position: absolute;
-  background-color: #d13639;
-  height: 3px;
-  top: 30px;
-  width: 0;
-  right: 20%;
-  left: 75%;
-  bottom: -10px;
-  transition: 0.4s;
-} */
-
 .nav-links a:link {
   color: white;
   list-style: none;
@@ -87,10 +72,6 @@ nav {
   transition: 0.4s;
 }
 
-/* #item1:hover:after {
-  width: 100%;
-} */
-
 #icon {
   position: absolute;
   top: 0.75rem;
@@ -101,6 +82,12 @@ nav {
   cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.fa-xmark {
+  padding-top: 15px;
+  padding-right: 10px;
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -148,20 +135,39 @@ nav {
     text-decoration: none;
   }
 
-  /* .nav-links.expanded {
-    display: block;
-  } */
-
   .nav-links li {
     text-align: center;
     justify-content: center;
     align-items: center;
     padding: 0.5rem 1rem;
   }
-}
 
-/* @media only screen and (min-width: 1024px) {
-  .expanded {
-    display: none;
+  .fa-xmark {
+    display: block;
   }
-} */
+
+  nav ul {
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 100vh;
+    background-color: #005b7f;
+    z-index: 2;
+    padding-top: 50px;
+    transition: 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 15px 0;
+  }
+
+  nav ul .fa-xmark {
+    position: absolute;
+    top: 5px;
+    left: 45px;
+    cursor: pointer;
+  }
+}

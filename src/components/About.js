@@ -53,44 +53,48 @@ function About() {
 
       <div>
         <h2 className="core-principles">Core Principles</h2>
-        <motion.div
-          ref={carousel}
-          className="carousel"
-          whileTap={{ cursor: "grabbing" }}
-        >
+        <div className="framer-motion">
           <motion.div
-            drag="x"
-            dragConstraints={{ right: 0, left: -width }}
-            className="items"
+            ref={carousel}
+            className="carousel"
+            whileTap={{ cursor: "grabbing" }}
           >
-            <motion.div className="item">
-              <h3>Integrity</h3>
-              <p>My record speaks for me, I am someone you can always trust.</p>
-              <img></img>
-            </motion.div>
-            <motion.div className="item">
-              <h3>Competence</h3>
-              <p>
-                As someone striving to be exceptional in this field. I am
-                dedicated to delivering only the best without settling.
-              </p>
-              <img></img>
-            </motion.div>
-            <motion.div className="item">
-              <h3>Discipline</h3>
-              <p>
-                This is a core principle that I have developed all through the
-                years. A successful developer cannot do without discipline
-              </p>
-              <img></img>
-            </motion.div>
-            <motion.div className="item">
-              <h3>Dedication</h3>
-              <p>I am ever dedicated to my work.</p>
-              <img></img>
+            <motion.div
+              drag="x"
+              dragConstraints={{ right: 0, left: -width }}
+              className="items"
+            >
+              <motion.div className="item">
+                <h3>Integrity</h3>
+                <p>
+                  My record speaks for me, I am someone you can always trust.
+                </p>
+                <img></img>
+              </motion.div>
+              <motion.div className="item">
+                <h3>Competence</h3>
+                <p>
+                  As someone striving to be exceptional in this field. I am
+                  dedicated to delivering only the best without settling.
+                </p>
+                <img></img>
+              </motion.div>
+              <motion.div className="item">
+                <h3>Discipline</h3>
+                <p>
+                  This is a core principle that I have developed all through the
+                  years. A successful developer cannot do without discipline
+                </p>
+                <img></img>
+              </motion.div>
+              <motion.div className="item">
+                <h3>Dedication</h3>
+                <p>I am ever dedicated to my work.</p>
+                <img></img>
+              </motion.div>
             </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
       <div className="skill-section">
@@ -129,9 +133,11 @@ function About() {
             </div>
           </div>
         </div>
-        <button onClick={onButtonClick} className="cv-btn">
-          Download CV
-        </button>
+        <div className="dld-btn-div">
+          <button onClick={onButtonClick} className="cv-btn">
+            Download CV
+          </button>
+        </div>
       </div>
     </>
   );

@@ -30,38 +30,22 @@ header {
   font-size: 16px;
   line-height: 20px;
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 14px 24px;
-  border: 2px solid;
+  /* border: 2px solid; */
+  background-color: #005b7f;
   transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
     -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
-  /* background: linear-gradient(
-    to right,
-    rgb(230, 30, 77) 0%,
-    rgb(227, 28, 95) 50%,
-    rgb(215, 4, 102) 100%
-  ); */
+
   color: #fff;
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 
-/* .main-btn::after {
-  content: "";
-  width: 400px;
-  height: 400px;
-  position: relative;
-  top: -50px;
-  left: -100px;
-  background-color: #ff3cac;
-  background-image: linear-gradient(
-    225deg,
-    #27d86c 0%,
-    #26caf8 50%,
-    #c625d0 100%
-  );
-  z-index: -1;
-  transition: transform 0.5s ease;
-} */
+.main-btn:hover {
+  background-color: transparent;
+  border: 2px solid;
+  transition: 0.5s;
+}
 
 @keyframes floating {
   0% {
