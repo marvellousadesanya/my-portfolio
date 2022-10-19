@@ -28,15 +28,13 @@ function Nav() {
         <div className={isMobile ? "expanded" : "nav-links"}>
           <ul className="navi">
             <Link to="/about">
-              <li id="item1" onClick={() => setIsMobile(!isMobile)}>
-                About Me
-              </li>
+              <li id="item1">About Me</li>
             </Link>
             <Link to="/portfolio">
-              <li onClick={() => setIsMobile(!isMobile)}>Portfolio</li>
+              <li>Portfolio</li>
             </Link>
             <Link to="/contact">
-              <li onClick={() => setIsMobile(!isMobile)}>Contact Me</li>
+              <li>Contact Me</li>
             </Link>
             <i
               className="fa-solid fa-xmark"
